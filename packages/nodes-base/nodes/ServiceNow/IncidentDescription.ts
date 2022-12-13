@@ -100,6 +100,18 @@ export const incidentFields: INodeProperties[] = [
 					'The assignment group of the incident. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>.',
 			},
 			{
+				displayName: 'Company Name or ID',
+				name: 'company',
+				type: 'options',
+				typeOptions: {
+					// nodelinter-ignore-next-line
+					loadOptionsMethod: 'getCompany',
+				},
+				default: '',
+				description:
+					'The company of the incident. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code-examples/expressions/">expression</a>.',
+			},
+			{
 				displayName: 'Business Service Name or ID',
 				name: 'business_service',
 				type: 'options',
